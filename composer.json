@@ -1,0 +1,17 @@
+{
+    "name": "wallace/app",
+    "description": "um simples tela de login",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WallaceBarros",
+            "email": "w.wallacebarros.cruz@gmail.com"
+        }
+    ],
+    "require": {}
+}
