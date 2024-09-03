@@ -13,5 +13,7 @@
             "email": "w.wallacebarros.cruz@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^11.3"
+    }
 }
