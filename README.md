@@ -3,9 +3,9 @@
 ## Objetivo
 Desenvolver uma aplicação simples em php de uma tela de login funcional
 
-[ ] Poder criar um novo usuario
-[ ] Poder logar com um usuario criado em uma seção
-[ ] Poder sair da seção
+- Poder criar um novo usuario
+- Poder logar com um usuario criado em uma seção
+- Poder sair da seção
 
 ## Instalção
 1. Copie o projeto para o reposirorio local.
