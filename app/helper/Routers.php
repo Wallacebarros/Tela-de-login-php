@@ -3,7 +3,7 @@ namespace App\Helper;
 
 class Routers
 {
-    private array $routes;
+    private array $routes = [];
     public function get($uri, $controller):void
     {
         $this->routes = [
@@ -12,7 +12,10 @@ class Routers
             'controller' => $controller
         ];
     }
+    public function post($uri, $controller):void
+    {
 
+    }
     public function getRouters():array
     {
         return $this->routes;
