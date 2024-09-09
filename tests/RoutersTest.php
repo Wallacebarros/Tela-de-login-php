@@ -61,4 +61,39 @@ class RoutersTest extends TestCase
 
         $this->assertEquals($expected, $actual);
     }
+    public function testMultiplasRotas():void
+    {
+        $this->routers->get('/',  'MeuController@metodo');
+        $this->routers->post('/',  'MeuController@metodo');
+
+        $this->routers->get('/home',  'MeuController@metodo');
+        $this->routers->post('/home',  'MeuController@metodo');
+
+        $expected = [
+            [
+                'method' => 'GET',
+                'uri' => '/',
+                'controller' => 'MeuController@metodo'
+            ],
+            [
+                'method' => 'POST',
+                'uri' => '/',
+                'controller' => 'MeuController@metodo'
+            ],
+            [
+                'method' => 'GET',
+                'uri' => '/home',
+                'controller' => 'MeuController@metodo'
+            ],
+            [
+                'method' => 'POST',
+                'uri' => '/home',
+                'controller' => 'MeuController@metodo'
+            ]
+        ];
+
+        $actual = $this->routers->getRouters();
+
+        $this->assertEquals($expected, $actual);
+    }
 }
