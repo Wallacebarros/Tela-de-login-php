@@ -14,7 +14,11 @@ class Routers
     }
     public function post($uri, $controller):void
     {
-
+        $this->routes = [
+            'method' => 'POST',
+            'uri' => $uri,
+            'controller' => $controller
+        ];
     }
     public function getRouters():array
     {
