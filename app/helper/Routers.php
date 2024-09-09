@@ -28,6 +28,16 @@ class Routers
             'controller' => $controller
         ];
     }
+
+    public function delete($uri, $controller):void
+    {
+        $this->routes = [
+            'method' => 'DELETE',
+            'uri' => $uri,
+            'controller' => $controller
+        ];
+    }
+
     public function getRouters():array
     {
         return $this->routes;
