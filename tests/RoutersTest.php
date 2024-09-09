@@ -12,11 +12,11 @@ class RoutersTest extends TestCase
     public function testGet(): void
     {
         $this->routers->get('/',  'MeuController@metodo');
-        $expected = [
+        $expected = [[
             'method' => 'GET',
             'uri' => '/',
             'controller' => 'MeuController@metodo'
-        ];
+        ]];
 
         $actual = $this->routers->getRouters();
 
@@ -25,11 +25,11 @@ class RoutersTest extends TestCase
     public function testPost(): void
     {
         $this->routers->post('/',  'MeuController@metodo');
-        $expected = [
+        $expected = [[
             'method' => 'POST',
             'uri' => '/',
             'controller' => 'MeuController@metodo'
-        ];
+        ]];
 
         $actual = $this->routers->getRouters();
 
@@ -38,11 +38,11 @@ class RoutersTest extends TestCase
     public function testPut(): void
     {
         $this->routers->put('/',  'MeuController@metodo');
-        $expected = [
+        $expected = [[
             'method' => 'PUT',
             'uri' => '/',
             'controller' => 'MeuController@metodo'
-        ];
+        ]];
 
         $actual = $this->routers->getRouters();
 
@@ -51,11 +51,11 @@ class RoutersTest extends TestCase
     public function testDelete(): void
     {
         $this->routers->delete('/',  'MeuController@metodo');
-        $expected = [
+        $expected = [[
             'method' => 'DELETE',
             'uri' => '/',
             'controller' => 'MeuController@metodo'
-        ];
+        ]];
 
         $actual = $this->routers->getRouters();
 
