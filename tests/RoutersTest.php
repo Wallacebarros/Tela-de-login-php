@@ -48,4 +48,17 @@ class RoutersTest extends TestCase
 
         $this->assertEquals($expected, $actual);
     }
+    public function testDelete(): void
+    {
+        $this->routers->delete('/',  'MeuController@metodo');
+        $expected = [
+            'method' => 'DELETE',
+            'uri' => '/',
+            'controller' => 'MeuController@metodo'
+        ];
+
+        $actual = $this->routers->getRouters();
+
+        $this->assertEquals($expected, $actual);
+    }
 }
