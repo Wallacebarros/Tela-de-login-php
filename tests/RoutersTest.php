@@ -22,4 +22,18 @@ class RoutersTest extends TestCase
 
         $this->assertEquals($expected, $actual);
     }
+    public function testPost(): void
+    {
+        $this->routers->post('/',  'MeuController@metodo');
+        $expected = [
+            'method' => 'POST',
+            'uri' => '/',
+            'controller' => 'MeuController@metodo'
+        ];
+
+        $actual = $this->routers->getRouters();
+
+        $this->assertEquals($expected, $actual);
+    }
+
 }
