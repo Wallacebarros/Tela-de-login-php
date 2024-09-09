@@ -20,6 +20,10 @@ class Routers
             'controller' => $controller
         ];
     }
+    public function put($uri, $controller):void
+    {
+        
+    }
     public function getRouters():array
     {
         return $this->routes;
