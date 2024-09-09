@@ -35,5 +35,17 @@ class RoutersTest extends TestCase
 
         $this->assertEquals($expected, $actual);
     }
+    public function testPut(): void
+    {
+        $this->routers->put('/',  'MeuController@metodo');
+        $expected = [
+            'method' => 'PUT',
+            'uri' => '/',
+            'controller' => 'MeuController@metodo'
+        ];
 
+        $actual = $this->routers->getRouters();
+
+        $this->assertEquals($expected, $actual);
+    }
 }
