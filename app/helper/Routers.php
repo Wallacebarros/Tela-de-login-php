@@ -6,7 +6,7 @@ class Routers
     private array $routes = [];
     public function get($uri, $controller):void
     {
-        $this->routes = [
+        $this->routes[] = [
             'method' => 'GET',
             'uri' => $uri,
             'controller' => $controller
@@ -14,7 +14,7 @@ class Routers
     }
     public function post($uri, $controller):void
     {
-        $this->routes = [
+        $this->routes[] = [
             'method' => 'POST',
             'uri' => $uri,
             'controller' => $controller
@@ -22,7 +22,7 @@ class Routers
     }
     public function put($uri, $controller):void
     {
-        $this->routes = [
+        $this->routes[] = [
             'method' => 'PUT',
             'uri' => $uri,
             'controller' => $controller
@@ -31,7 +31,7 @@ class Routers
 
     public function delete($uri, $controller):void
     {
-        $this->routes = [
+        $this->routes[] = [
             'method' => 'DELETE',
             'uri' => $uri,
             'controller' => $controller
