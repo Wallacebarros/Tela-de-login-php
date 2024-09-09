@@ -1,2 +1,2 @@
 <?php
-echo "teste";
+include './vendor/autoload.php';
