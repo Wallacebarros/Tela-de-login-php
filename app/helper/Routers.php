@@ -22,7 +22,11 @@ class Routers
     }
     public function put($uri, $controller):void
     {
-        
+        $this->routes = [
+            'method' => 'PUT',
+            'uri' => $uri,
+            'controller' => $controller
+        ];
     }
     public function getRouters():array
     {
