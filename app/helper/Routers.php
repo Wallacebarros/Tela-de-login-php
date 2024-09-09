@@ -3,13 +3,18 @@ namespace App\Helper;
 
 class Routers
 {
+    private array $routes;
     public function get($uri, $controller):void
     {
-
+        $this->routes = [
+            'method' => 'GET',
+            'uri' => $uri,
+            'controller' => $controller
+        ];
     }
 
     public function getRouters():array
     {
-        return [];
+        return $this->routes;
     }
 }
