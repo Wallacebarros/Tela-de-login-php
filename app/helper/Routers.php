@@ -42,4 +42,25 @@ class Routers
     {
         return $this->routes;
     }
+
+    public function run(string $uri, string $method): void
+    {
+        foreach ($this->getRouters() as $route) {
+            if (in_array($uri, $route))
+            {
+                $this->includController($route['controller']);
+                exit();
+            }
+        }
+
+        echo 'erro';
+    }
+
+    private function includController(string $contorller): void
+    {
+        [$class, $method] = explode('@', $contorller);
+        $use = "\\App\\Controllers\\$class";
+        $object = new $use();
+        $object->$method();
+    }
 }

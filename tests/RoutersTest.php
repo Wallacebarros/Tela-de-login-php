@@ -96,4 +96,17 @@ class RoutersTest extends TestCase
 
         $this->assertEquals($expected, $actual);
     }
+
+    public function testeLoadController(): void
+    {
+        $this->routers->get('/', 'HomeController@index');
+
+        $expected = 'Teste index';
+
+        ob_start();
+        $this->routers->run('/', 'GET');
+        $actual = ob_get_clean();   
+
+        $this->assertEquals($expected, $actual);
+    }
 }
